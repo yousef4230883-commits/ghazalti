@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#170912">
+<title>إلى غازالتي 🦌❤️</title>
+<style>
+:root{--bg:#10070d;--card:#1b0c14;--pink:#ff7aa8;--soft:#ffd8e5;--gold:#f7d58a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 50% -10%,#4b1830 0,#170912 42%,#090409 100%);color:#fff;font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif;overflow-x:hidden}
+button{font:inherit}
+#opening{position:fixed;inset:0;z-index:50;display:grid;place-items:center;background:radial-gradient(circle,#45162e,#10070d 70%);transition:opacity .8s,visibility .8s}
+#opening.hide{opacity:0;visibility:hidden;pointer-events:none}
+.open-card{text-align:center;padding:28px;max-width:420px}
+.deer{font-size:72px;animation:float 2.8s ease-in-out infinite}
+.open-card h1{font-size:clamp(32px,9vw,58px);margin:12px 0 8px;background:linear-gradient(90deg,#fff,#ffd0df,#f7d58a);-webkit-background-clip:text;color:transparent}
+.open-card p{color:#f6dbe4;line-height:1.9;margin:0 auto 24px}
+#openBtn{border:0;border-radius:999px;padding:14px 28px;color:#2a0b17;background:linear-gradient(135deg,#ffd8e5,#f7d58a);font-weight:800;box-shadow:0 10px 35px #ff6f9a33;cursor:pointer}
+.hint{font-size:12px;color:#d7aebe;margin-top:12px}
+header{min-height:88vh;display:grid;place-items:center;padding:70px 20px 40px;text-align:center;position:relative}
+.hero{max-width:800px;position:relative;z-index:2}
+.badge{display:inline-block;padding:7px 14px;border:1px solid #ffffff20;border-radius:999px;background:#ffffff09;color:#ffd8e5}
+.hero h2{font-size:clamp(42px,11vw,90px);line-height:1.05;margin:18px 0 10px}
+.hero h2 span{background:linear-gradient(90deg,#ff9abd,#fff,#f7d58a);-webkit-background-clip:text;color:transparent}
+.hero p{font-size:clamp(17px,4vw,22px);line-height:1.9;color:#f4dce5}
+.music{position:fixed;z-index:20;left:16px;bottom:16px;width:54px;height:54px;border:1px solid #ffffff25;border-radius:50%;background:#24101a;color:white;display:none;cursor:pointer;backdrop-filter:blur(12px)}
+.music.show{display:block}
+section{padding:70px 18px;max-width:1050px;margin:auto}
+.title{text-align:center;margin-bottom:34px}
+.title h3{font-size:clamp(28px,6vw,42px);margin:0 0 8px}
+.title p{color:#cfaab9;margin:0}
+.letter{background:linear-gradient(145deg,#21101a,#140912);border:1px solid #ffffff12;border-radius:28px;padding:30px;box-shadow:0 20px 70px #0006}
+.letter p{font-size:19px;line-height:2.15;color:#f9e8ee;margin:0}
+.signature{text-align:left;color:#f7d58a;margin-top:25px;font-weight:700}
+.gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:12px}
+.photo{margin:0;overflow:hidden;border-radius:20px;background:#160a11;border:1px solid #ffffff12;box-shadow:0 15px 40px #0005;cursor:pointer}
+.photo img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .7s}
+.photo:hover img{transform:scale(1.04)}
+.photo:nth-child(1){grid-column:span 7;height:420px}
+.photo:nth-child(2){grid-column:span 5;height:420px}
+.photo:nth-child(3),.photo:nth-child(4),.photo:nth-child(5){grid-column:span 4;height:360px}
+.videos{display:grid;gap:20px}
+.video-card{background:#160a11;border:1px solid #ffffff12;border-radius:24px;padding:10px;box-shadow:0 15px 45px #0005}
+.video-card video{width:100%;display:block;border-radius:17px;max-height:600px;background:#000}
+.final{text-align:center;padding-bottom:120px}
+.final .heart{font-size:70px;animation:pulse 1.8s infinite}
+.final h3{font-size:clamp(30px,7vw,52px);margin:8px 0}
+.final p{font-size:18px;line-height:2;color:#efd8e1}
+footer{text-align:center;color:#8f6978;font-size:12px;padding:25px}
+.float-heart{position:fixed;bottom:-40px;z-index:5;pointer-events:none;animation:rise linear forwards;opacity:.75}
+#lightbox{position:fixed;inset:0;z-index:40;background:#000d;display:none;place-items:center;padding:18px}
+#lightbox img{max-width:95vw;max-height:90vh;border-radius:20px;box-shadow:0 25px 80px #000}
+#lightbox.open{display:grid}
+@keyframes rise{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+@keyframes float{50%{transform:translateY(-10px)}}
+@keyframes pulse{50%{transform:scale(1.12)}}
+@media(max-width:700px){
+  header{min-height:78vh}
+  .gallery{display:grid;grid-template-columns:1fr 1fr}
+  .photo:nth-child(n){grid-column:auto;height:260px}
+  .photo:nth-child(1){grid-column:1/-1;height:380px}
+  .letter{padding:22px}
+  .letter p{font-size:17px}
+}
+
+<style>
+body.locked>*:not(#passwordGate){visibility:hidden!important} #passwordGate{position:fixed;inset:0;z-index:100;display:grid;place-items:center;background:radial-gradient(circle at 50% 30%,#4b1830,#10070d 72%);padding:22px}
+#passwordGate.hidden{display:none}
+.pass-card{width:min(430px,100%);text-align:center;padding:34px 25px;border:1px solid #ffffff18;border-radius:30px;background:#1b0c14eF;box-shadow:0 25px 90px #0009;backdrop-filter:blur(15px)}
+.pass-icon{font-size:55px}
+.pass-card h1{font-size:clamp(25px,7vw,38px);margin:12px 0;color:#ffe0e9}
+.pass-card p{color:#d9b5c2;margin:0 0 22px}
+#passInput{width:100%;padding:14px 16px;border-radius:15px;border:1px solid #ffffff20;background:#0d060b;color:#fff;text-align:center;outline:none;font-size:18px}
+#passInput:focus{border-color:#ff91b5}
+#passBtn{width:100%;margin-top:12px;padding:14px;border:0;border-radius:15px;background:linear-gradient(135deg,#ffd8e5,#f7d58a);color:#2a0b17;font-weight:800;cursor:pointer}
+#passError{display:none;color:#ff9fba;margin-top:12px;font-size:14px}
+</style>
+
+</style>
+</head>
+<body class="locked">
+
+<div id="passwordGate">
+  <div class="pass-card">
+    <div class="pass-icon">🔐</div>
+    <h1>المفاجأة دي ليكي يا غازالتي 🦌❤️</h1>
+    <p>دخّلي الباسورد عشان تفتحي الهدية ✨</p>
+    <input id="passInput" type="password" placeholder="Password" autocomplete="off">
+    <button id="passBtn">دخول ❤️</button>
+    <div id="passError">الباسورد مش صح 😌 جرّبي تاني</div>
+  </div>
+</div>
+
+
+<div id="opening">
+  <div class="open-card">
+    <div class="deer">🦌</div>
+    <h1>لـ غازالتي ❤️</h1>
+    <p>عملتلك حاجة صغيرة من قلبي…<br>اضغطي وافتحي المفاجأة 🎁</p>
+    <button id="openBtn">افتحي يا غازالتي ✨</button>
+    <div class="hint">🎵 الموسيقى هتبدأ مع فتح المفاجأة</div>
+  </div>
+</div>
+
+<button class="music" id="musicBtn" aria-label="تشغيل وإيقاف الموسيقى">♫</button>
+<audio id="music" src="assets/music.mp3" loop preload="auto"></audio>
+
+<header>
+  <div class="hero">
+    <div class="badge">ذكرى صغيرة مننا ❤️</div>
+    <h2>كل سنة وإنتي طيبة<br><span>يا غازالتي 🦌</span></h2>
+    <p>وكل سنة وأنا معاكي… وكل سنة وإحنا بنعمل ذكريات أكتر وأحلى من اللي قبلها.</p>
+  </div>
+</header>
+
+<section>
+  <div class="title">
+    <h3>كلمتين من قلبي 💌</h3>
+    <p>حاجات يمكن الكلام العادي مايعرفش يقولها كلها</p>
+  </div>
+  <div class="letter">
+    <p>
+      يا غازالتي 🦌❤️،<br>
+      كل سنة وإنتي طيبة، وكل سنة وإنتي أجمل حاجة حصلتلي.
+      يمكن مهما كتبت مش هعرف أوصفلك قد إيه وجودك فارق معايا،
+      بس اللي أعرفه إني بحب كل لحظة بتجمعنا، وكل ضحكة، وكل ذكرى بنعملها سوا.
+      <br><br>
+      نفسي كل سنة تعدي علينا وإحنا لسه بنختار بعض، ولسه بنضحك على نفس الحاجات،
+      ولسه بنفرح بوجود بعض حتى في أبسط الأيام.
+      <br><br>
+      ربنا يخليكي ليا، ويفضل بينا دايمًا حُب وراحة وذكريات حلوة كتير.
+      <br><br>
+      <b>كل سنة وإنتي غازالتي… وكل سنة وأنا معاكي ❤️</b>
+    </p>
+    <div class="signature">من الشخص اللي بيحبك ❤️</div>
+  </div>
+</section>
+
+<section>
+  <div class="title">
+    <h3>ذكرياتنا 📸</h3>
+    <p>كل صورة فيها حكاية صغيرة من حكايتنا</p>
+  </div>
+  <div class="gallery">
+    <figure class="photo"><img src="assets/photo1.jpg" alt="ذكرى لنا"></figure>
+    <figure class="photo"><img src="assets/photo2.jpg" alt="ذكرى لنا"></figure>
+    <figure class="photo"><img src="assets/photo3.jpg" alt="ذكرى لنا"></figure>
+    <figure class="photo"><img src="assets/photo4.jpg" alt="ذكرى لنا"></figure>
+    <figure class="photo"><img src="assets/photo5.jpg" alt="ذكرى لنا"></figure>
+  </div>
+</section>
+
+<section>
+  <div class="title">
+    <h3>لحظاتنا 🎬</h3>
+    <p>شوية من اللحظات اللي تستاهل تفضل محفوظة</p>
+  </div>
+  <div class="videos">
+    <div class="video-card"><video src="assets/video1.mp4" controls playsinline preload="metadata"></video></div>
+    <div class="video-card"><video src="assets/video2.mp4" controls playsinline preload="metadata"></video></div>
+    <div class="video-card"><video src="assets/video3.mp4" controls playsinline preload="metadata"></video></div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="heart">❤️</div>
+  <h3>لسه الحكاية في أولها…</h3>
+  <p>
+    وكل سنة جاية نفسي تكون فيها صور أكتر، وضحك أكتر، وذكريات أكتر.<br>
+    <strong>كل سنة وإنتي معايا يا غازالتي 🦌❤️</strong>
+  </p>
+</section>
+
+<footer>صُنعت بحب مخصوص لـ غازالتي 🦌❤️</footer>
+
+<div id="lightbox"><img id="lightboxImg" alt=""></div>
+
+<script>
+const opening=document.getElementById('opening');
+const openBtn=document.getElementById('openBtn');
+const music=document.getElementById('music');
+const musicBtn=document.getElementById('musicBtn');
+
+function startMusic(){
+  music.play().catch(()=>{});
+  musicBtn.classList.add('show');
+}
+openBtn.addEventListener('click',()=>{
+  opening.classList.add('hide');
+  startMusic();
+  for(let i=0;i<16;i++) setTimeout(spawnHeart,i*120);
+});
+musicBtn.addEventListener('click',()=>{
+  if(music.paused){music.play();musicBtn.textContent='♫';}
+  else{music.pause();musicBtn.textContent='🔇';}
+});
+
+function spawnHeart(){
+  const h=document.createElement('div');
+  h.className='float-heart';
+  h.textContent=['❤️','💕','💗','✨','🦌'][Math.floor(Math.random()*5)];
+  h.style.right=(Math.random()*100)+'vw';
+  h.style.fontSize=(14+Math.random()*22)+'px';
+  h.style.animationDuration=(5+Math.random()*5)+'s';
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),11000);
+}
+setInterval(spawnHeart,900);
+
+const lb=document.getElementById('lightbox');
+const lbImg=document.getElementById('lightboxImg');
+document.querySelectorAll('.photo img').forEach(img=>{
+  img.addEventListener('click',()=>{
+    lbImg.src=img.src;
+    lb.classList.add('open');
+  });
+});
+lb.addEventListener('click',()=>lb.classList.remove('open'));
+</script>
+
+<script>
+const passwordGate=document.getElementById('passwordGate');
+const passInput=document.getElementById('passInput');
+const passBtn=document.getElementById('passBtn');
+const passError=document.getElementById('passError');
+
+function checkPassword(){
+  if(passInput.value === 'love'){
+    passwordGate.classList.add('hidden');
+    document.body.classList.remove('locked');
+    passInput.value='';
+  }else{
+    passError.style.display='block';
+    passInput.select();
+  }
+}
+passBtn.addEventListener('click',checkPassword);
+passInput.addEventListener('keydown',e=>{if(e.key==='Enter') checkPassword();});
+</script>
+
+</body>
+</html>
